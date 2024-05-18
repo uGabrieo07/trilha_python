@@ -88,14 +88,14 @@ def PedraPapelTesoura ():
   return None
 
 def VerificaConvergencia():
-    soma = 0
+    soma = 0 #resultado atualizado a cada iteração
     n = 2
-    termosMax = 10000
+    termosMax = 10000 #numero de iterações arbitrário
     
     for _ in range(termosMax):
         termo = 1 / (n * m.log(n)**2)
         soma += termo
         n += 1
         
-    return soma < float('inf')
+    return soma < float('inf') #representa um número infinito. caso o resultado após 10000 iterações seja < que infinito, a série converge.
 
